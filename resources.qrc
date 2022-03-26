@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>convert.png</file>
+    <file>background1.jpg</file>
+    <file>../../Downloads/error.png</file>
+  </qresource>
+</RCC>
