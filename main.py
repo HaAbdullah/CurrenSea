@@ -32,7 +32,7 @@ class Ui_Form(object):
         self.background = QtWidgets.QLabel(self.widget)
         self.background.setGeometry(QtCore.QRect(10, 10, 861, 531))
         self.background.setText("")
-        self.background.setPixmap(QtGui.QPixmap("../../Downloads/background1 (1).jpg"))
+        self.background.setPixmap(QtGui.QPixmap("../../Downloads/currenSeaBackground.jpg"))
         self.background.setObjectName("background")
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(20, 10, 251, 51))
@@ -92,7 +92,7 @@ class Ui_Form(object):
         self.label = QtWidgets.QLabel(self.frame_2)
         self.label.setGeometry(QtCore.QRect(0, 10, 81, 81))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/images/convert.png"))
+        self.label.setPixmap(QtGui.QPixmap("../../Downloads/convert.png"))
         self.label.setObjectName("label")
         self.label.raise_()
         self.pushButton.raise_()
@@ -112,10 +112,11 @@ class Ui_Form(object):
         self.label_3 = QtWidgets.QLabel(self.widget)
         self.label_3.setGeometry(QtCore.QRect(830, 10, 41, 41))
         self.label_3.setText("")
-        self.label_3.setPixmap(QtGui.QPixmap(":/images/Downloads/error.png"))
+        self.label_3.setPixmap(QtGui.QPixmap("../../Downloads/error.png"))
         self.label_3.setObjectName("label_3")
         self.CLOSE = QtWidgets.QPushButton(self.widget)
         self.CLOSE.setGeometry(QtCore.QRect(820, 10, 51, 41))
+        self.CLOSE.clicked.connect(self.closed)
         self.CLOSE.setStyleSheet("background: transparent\n"
 "")
         self.CLOSE.setText("")
@@ -150,6 +151,7 @@ class Ui_Form(object):
         self.CONVERSIONBOX.setText(CurrencyConverter.driver(FROM, TO, AMOUNT))
 
     def closed(self):
+        print("CLOSE")
         sys.exit(app.exec_())
 
 
